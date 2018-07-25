@@ -1,0 +1,14 @@
+<div *ngIf="profile; else noProfile">
+  <p>
+    Nickname | {{ profile.nickname }}
+  </p>
+  <p>
+    Name | {{ profile.name }}
+  </p>
+  <p>
+    Email | {{ profile.email }}
+  </p>
+</div>
+<ng-template #noProfile>
+  <div>You are not logged in</div>
+</ng-template>

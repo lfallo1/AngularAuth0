@@ -1,0 +1,13 @@
+<div>
+  home works!
+  <div >
+    <button mat-raised-button color="primary" (click)="fetchUser(1)">Execute dummy request</button>
+    <input type="number" [(ngModel)]="id" />
+    <div *ngIf="error">
+      {{ error }}
+    </div>
+    <div *ngIf="user">
+      {{user.username}} | {{user.email}}
+    </div>
+  </div>
+</div>

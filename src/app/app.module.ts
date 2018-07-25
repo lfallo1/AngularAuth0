@@ -3,17 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from './material.module';
+import {MaterialModule} from './config/material.module';
 import {MatIconRegistry} from '@angular/material';
+import { HomeComponent } from './home/home.component';
+import { MembersComponent } from './members/members.component';
+import {AppRouterModule} from './config/router.module';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { CallbackComponent } from './callback/callback.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MembersComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    FormsModule,
+    MaterialModule,
+    AppRouterModule,
+    HttpClientModule
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent]

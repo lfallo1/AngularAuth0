@@ -1,10 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-  <button mat-stroked-button>Basic</button>
-  <button mat-stroked-button color="primary">Primary</button>
-  <button mat-stroked-button color="accent">Accent</button>
-  <button mat-stroked-button color="warn">Warn</button>
-  <button mat-stroked-button disabled>Disabled</button>
-  <mat-icon>home</mat-icon>
+  <a routerLink="/" mat-stroked-button color="primary">Home</a>
+  <button mat-stroked-button color="warn" (click)="login()" *ngIf="!isAuthenticated">Login</button>
+  <button mat-stroked-button color="warn" (click)="logout()" *ngIf="isAuthenticated">Logout</button>
+  <a routerLink="/members" mat-stroked-button color="accent">Members</a>
+  <router-outlet></router-outlet>
 </div>
 
